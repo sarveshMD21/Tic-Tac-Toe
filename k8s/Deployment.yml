@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-deplyment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: app
+  template:
+    metadata:
+      labels:
+        app: app
+    spec:
+      # nodeSelector:  # Define node selector here
+      #   Environment: production
+      #   NodeGroup: eks-nodes
+      containers:
+      - name: app
+        image: 211125440773.dkr.ecr.us-east-1.amazonaws.com/sarveshrepo:latest
+        ports:
+        - containerPort: 3000
