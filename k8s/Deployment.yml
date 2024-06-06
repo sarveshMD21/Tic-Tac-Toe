@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: app
-        image: 211125440773.dkr.ecr.us-east-1.amazonaws.com/tictactoe-repo
+        image: # Add your image here
         imagePullPolicy: Always
         ports:
         - containerPort: 3000
